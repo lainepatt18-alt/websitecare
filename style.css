@@ -1,0 +1,143 @@
+
+/* Global Reset and Typography */
+:root {
+    --primary-color:#006400; /* Dark Olive Green */
+    --secondary-color: #F0EAD6; /* Light Rice/Cream Color */
+    --text-color: #333;
+    --font-family: 'Georgia', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- Header & Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+    color: #006400;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #8FBC8F; /* Lighter green on hover */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #708238; /* Slightly darker green */
+}
+
+/* --- Product Grid --- */
+.product-grid {
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.product-grid h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+.product-card {
+    display: inline-block;
+    width: 45%; /* Adjust for 2-column layout */
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    color: #B8860B; /* Darker Gold for price */
+    margin-top: 10px;
+}
+
+/* --- Benefits Section --- */
+.benefits-section {
+    background-color: #f9f9f9;
+    padding: 50px 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9em;
+}

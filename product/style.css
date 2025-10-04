@@ -1,0 +1,363 @@
+/*=====================================
+  1. Global Styles and Typography
+=======================================*/
+
+:root {
+    --primary-color: #556B2F;   /* Dark Olive Green (Branding & Key Text) */
+    --secondary-color: #F5F5DC; /* Beige/Cream (Soft Backgrounds) */
+    --accent-color: #B8860B;    /* Gold/Bronze (Price & Accents) */
+    --text-color: #333333;      /* Dark Gray (Body Text) */
+    --light-bg: #FFFFFF;        /* Pure White (Main Background) */
+    --border-color: #E0E0E0;    /* Light Gray for borders */
+    
+    /* Font families: Using a clean sans-serif for headings and an elegant serif for body */
+    --heading-font: 'Helvetica Neue', Arial, sans-serif;
+    --body-font: 'Georgia', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg); 
+    padding-top: 60px; /* Space for sticky navbar */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+a:hover {
+    color: #8FBC8F; 
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-weight: 500; /* Medium weight for modern feel */
+}
+
+
+/*=====================================
+  2. Header and Navigation (Navbar)
+=======================================*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Softer, deeper shadow */
+    position: fixed; /* Changed to fixed for smooth scrolling */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2.0em; /* Slightly larger logo */
+    font-weight: 700; /* Bold logo */
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase; /* Subtle touch */
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px; /* Maintain vertical alignment */
+}
+
+
+/*=====================================
+  3. Homepage Styles (index.html)
+=======================================*/
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 100px 20px 80px; /* More vertical padding */
+    margin-bottom: 60px;
+    border-bottom: 5px solid var(--border-color); /* Separator line */
+}
+
+.hero-section h1 {
+    font-size: 3.5em; /* Larger, more impactful heading */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    max-width: 100%; 
+    max-height: 400px; 
+    display: block; 
+    margin: 0 auto 30px auto;
+    border-radius: 10px; /* Softer rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    padding: 15px 35px; /* Larger button */
+    border-radius: 30px; /* Pill shape */
+    font-size: 1.1em;
+}
+
+.cta-button:hover {
+    background-color: #708238; 
+    transform: scale(1.05);
+}
+
+/* Product Grid (Homepage) */
+.product-grid {
+    padding: 20px 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-grid h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    position: relative;
+}
+
+.product-grid h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-card {
+    transition: all 0.3s ease-in-out;
+    border: none; /* Remove default border */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.product-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 1.4em;
+    margin: 15px 0 5px 0;
+}
+
+.price {
+    font-size: 1.1em;
+    color: var(--accent-color);
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background-color: #f9f9f9;
+    padding: 80px 50px; /* More padding */
+    text-align: center;
+    margin-top: 40px;
+}
+
+.benefits-section h2 {
+    margin-bottom: 25px;
+}
+.benefits-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+
+/*=====================================
+  4. Products Page Styles (products.html)
+=======================================*/
+
+.page-header {
+    background-color: var(--secondary-color);
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.product-category-section {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 50px;
+    border-bottom: 1px dashed var(--border-color); /* Dotted separator */
+}
+
+.category-title {
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.full-product-showcase {
+    padding: 0;
+}
+
+.product-detail-card {
+    gap: 60px; /* Increased gap */
+    margin-bottom: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Nicer shadow */
+    border: 1px solid var(--border-color);
+    background-color: var(--light-bg);
+}
+
+.product-img {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-info {
+    padding: 0 0px;
+}
+
+.product-info h2 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
+.description {
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.price-large {
+    color: var(--accent-color); 
+}
+
+.add-to-cart-btn {
+    /* Uses the same style as CTA button for consistency */
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    padding: 12px 30px;
+    border-radius: 30px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #708238; 
+}
+
+
+/*=====================================
+  5. Footer (Both Pages)
+=======================================*/
+
+footer {
+    text-align: center;
+    padding: 30px; /* More padding */
+    background-color: var(--primary-color);
+    color: var(--secondary-color); /* Light text on dark footer */
+    font-size: 0.9em;
+    margin-top: 50px;
+    font-family: var(--sans-font);
+}
+footer div {
+    margin-top: 8px;
+}
+
+
+/*=====================================
+  6. Media Queries (Responsiveness)
+=======================================*/
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    /* Homepage */
+    .product-card {
+        width: 90%;
+        max-width: 450px; /* Allow cards to get bigger on medium screens */
+        margin: 15px auto;
+    }
+
+    /* Products Page */
+    .product-detail-card,
+    .product-detail-card.reverse-layout {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .product-img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 25px;
+    }
+    .product-info {
+        width: 100%;
+        padding: 0;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        display: none; 
+    }
+    .navbar {
+        justify-content: center;
+    }
+    .full-product-showcase {
+        padding: 10px;
+    }
+    .hero-section {
+        padding: 80px 10px 60px;
+    }
+    .product-detail-card {
+        gap: 20px;
+    }
+}
